@@ -7,6 +7,9 @@ import Flashcard from './Flashcard'
 function App() {
   const [count, setCount] = useState(1)
 
+  const [flipped, setFlipped] = useState(false)
+  
+
   const Flashcards = [
     {
       id: 1,
@@ -38,18 +41,26 @@ function App() {
   const Back = () => {
     if (count > 0) {
       setCount(count - 1)
+      setFlipped(false)
     }
   }
 
   const Next = () => {
     if (count < 4) {
       setCount(count + 1)
+      setFlipped(false)
     }
   }
 
   return (
     <>
-      <Flashcard id={Flashcards[count].id} question={Flashcards[count].question} answer={Flashcards[count].answer}></Flashcard>
+      <Flashcard 
+      id={Flashcards[count].id} 
+      question={Flashcards[count].question} 
+      answer={Flashcards[count].answer}
+      flipped={flipped}
+      setFlipped={setFlipped}>
+      </Flashcard>
       <button onClick={Back}>Back</button>
       <button onClick={Next}>Next</button>
     </>
