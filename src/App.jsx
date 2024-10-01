@@ -75,25 +75,28 @@ function App() {
 
   return (
     <>
-      <div className="bg-[url('https://t3.ftcdn.net/jpg/04/32/82/80/360_F_432828076_oObmCMDFy2p3s6pT3Z0AZPatmE74T817.jpg')] bg-cover bg-center min-h-screen text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl text-white font-bold font-serif mb-10">
-            Soccer Trivia Questions
-          </h1>
-          <h4 className="text-white mb-6">Number of Flashcards: 10</h4>
-          <Flashcard
-            id={Flashcards[count].id}
-            question={Flashcards[count].question}
-            answer={Flashcards[count].answer}
-            flipped={flipped}
-            setFlipped={setFlipped}
-          />
-          <div className="mt-10 space-x-4">
-            <button onClick={Back} className="px-4 py-2 bg-blue-500 text-white rounded">Back</button>
-            <button onClick={Next} className="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
+      <div className="bg-[url('https://i.etsystatic.com/38660474/r/il/12429e/4352455753/il_fullxfull.4352455753_jinn.jpg')] bg-cover bg-center fixed inset-0 flex flex-col justify-center items-center text-center min-h-screen">
+          <div className="flex flex-col justify-center items-center">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl text-white font-bold font-serif mb-10">
+                Soccer Trivia Questions
+              </h1>
+              <h4 className="text-white mb-6">How good is your soccer knowledge? Test your knowledge about soccer here!</h4>
+              <h4 className="text-white mb-6">Number of Flashcards: 10</h4>
+              <Flashcard
+                id={Flashcards[count].id}
+                question={Flashcards[count].question}
+                answer={Flashcards[count].answer}
+                flipped={flipped}
+                setFlipped={setFlipped}
+              />
+              <div className="mt-10 space-x-4">
+                <button onClick={Back} className="px-4 py-2 bg-blue-500 text-white rounded">Back</button>
+                <button onClick={Next} className="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
+              </div>
           </div>
-        </div>
+      </div>
     </>
   )
 }
 
-export default App
+export default App;
